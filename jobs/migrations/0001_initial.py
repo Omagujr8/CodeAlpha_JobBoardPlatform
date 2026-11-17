@@ -64,5 +64,5 @@ class Migration(migrations.Migration):
             ("employer", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name="notifications", to="jobs.employer")),
         ], options={"ordering": ["-created_at"]}),
         migrations.AddConstraint(model_name="jobapplication", constraint=models.UniqueConstraint(fields=("job", "candidate"), name="unique_candidate_job_application")),
-        migrations.AddIndex(model_name="joblisting", index=models.Index(fields=["is_published", "employment_type", "created_at"], name="jobs_joblist_is_publ_0c9f0a_idx")),
+        migrations.AddIndex(model_name="joblisting", index=models.Index(fields=["is_published", "employment_type", "created_at"], name="job_pub_type_created_idx")),
     ]

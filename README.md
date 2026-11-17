@@ -91,7 +91,7 @@ Content-Type: application/json
 
 {"status": "shortlisted"}
 ```
-Allowed statuses: `submitted`, `reviewing`, `shortlisted`, `rejected`, `hired`, `withdrawn`. A stored notification is created for the employer on submission and for the candidate when the status changes.
+Allowed statuses: `submitted`, `reviewing`, `shortlisted`, `rejected`, `hired`, `withdrawn`. A stored notification is created for the employer when a candidate applies; status changes are also recorded as employer notifications.
 
 ## Error responses
 Validation errors return `400`; unauthenticated requests return `401`; authenticated users without the required role/ownership return `403`; missing records return `404`; duplicate applications return `400`. DRF's standard error format is retained for field-level validation details.
